@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component ({
+    selector: 'app-root',
+    template: `
+        <h1>{{name}} site</h1>
+        <h2>{{subHeader}}</h2>
+        <ul>
+            <li *ngFor="let speaker of speakers">{{speaker}}</li>
+        </ul>
+    `
 })
+
 export class AppComponent {
-  title = 'personal-website';
+    name = 'Chad\'s 2019';
+    subHeader = 'mother mary comforts me';
+    speakers = ['Chad Gauthier', 'Manuel Simmons'];
 }

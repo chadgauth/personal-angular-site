@@ -1,0 +1,10 @@
+<h1>{{experience.companyName}}</h1>
+<div *ngFor="let position of experience.positions">
+    <div class="d-flex flex-row justify-content-between align-items-baseline">
+    <h3>{{position.name}}</h3>
+    <p>{{position.startDate | date:'LLL yyyy'}} - {{position.endDate | date:'LLL yyyy'}}</p>    
+    </div>
+    <ul>
+        <li *ngFor="let highlight of position.highlights">{{highlight}}</li>
+    </ul>
+</div>
